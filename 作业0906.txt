@@ -1,0 +1,101 @@
+1.输出
+   *
+  ***
+ ***** 
+
+public class xinghao {
+	public static void main(String[] args) {
+		for(int i =1;i<4;i++) {           //控制行数
+			for(int j=1;j<=3-i;j++) {           //控制空格
+				System.out.print(" ");
+			}
+			for(int h =1;h<=(2*i-1);h++) {           //控制星星的数量
+				System.out.print("*");
+			}
+			System.out.print("\n");
+		}
+	}
+}
+
+2. 斐波那契数列
+   //递归
+
+public class fib {4.
+	public static void main(String[] args) {
+		int num0=0;
+		int num1=1;
+		int numn=1;
+		for(int n=3;n>1;n--) {
+			numn=num0+num1;
+			num0=numn;
+			num1=numn;
+		}
+		System.out.println(numn);
+	}
+
+}
+   //非递归
+public static int Recursion(int n) {
+		if(n==0) {
+			return 0;
+		}
+		if(n==1){
+			return 1;
+		}
+		return Recursion(n-1)+Recursion(n-2);
+	}
+	public static void main(String[] args) {
+		int x=Recursion(3);
+		System.out.println(x);
+	}
+3.  12 = 2 * 2 * 3
+
+public class fenjieyinshi {
+	public static void main(String[] args) {
+		fen(12);
+	}
+	
+	public static void fen(int n) {
+		for(int i=2;i<=n;i++) {
+			while(n%i==0) {
+				System.out.println(i);
+				n=n/i;
+				i=2;
+			}
+		}
+	}
+
+}
+4.  乘法口诀表
+
+public class multiplication {
+	public static void main(String[] args) {
+		for(int i=1;i<=9;i++) {
+			for(int j=1;j<=i;j++) {
+				System.out.print(i+"*"+j+"="+(i*j)+"\t");
+			}
+		System.out.println();
+		}
+	}
+
+}
+
+
+5. 所有的水仙花数字
+
+public class daffodil {
+	public static void main(String[] args) {
+		int n,t,h;      //n t h 分别代表个位 十位 百位
+		for(int num=100;num<1000;num++) {
+			h=num/100;
+			t=(num-h*100)/10;
+			n=num%10;
+			if((h*h*h+t*t*t+n*n*n)==num) {
+				
+				System.out.println("水仙花数 "+num+"\n");
+				
+			}
+		}
+	}
+
+}
